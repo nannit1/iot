@@ -1,0 +1,19 @@
+const int forcepin = A0
+void setup() {
+Serial.begin(9600);
+}
+void loop() {
+int value = analogRead(forcepin);
+Serial.print(value);
+if (value < 10){
+Serial.println(" -> no pressure");}
+else if (value < 200){
+Serial.println(" -> light touch");}
+else if (value < 500){
+Serial.println(" -> light pressure");}
+else if (value < 800){
+Serial.println(" -> medium pressure");}
+else{
+Serial.println(" -> big pressure");}
+delay(1000);
+}
