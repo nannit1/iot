@@ -1,0 +1,23 @@
+const int ledPin = 13;
+const int soundPin = A0;
+int value=0;
+void setup()
+{
+pinMode(ledPin,OUTPUT);
+Serial.begin(9600);
+}
+void loop()
+{
+value = digitalRead(soundPin);
+Serial.println(value);
+if(value == HIGH)
+{
+digitalWrite(ledPin,HIGH);
+Serial.println("Sound Detected");
+}
+else
+{
+digitalWrite(ledPin,LOW);
+Serial.println("Sound not Detected");
+}
+delay(1000);
