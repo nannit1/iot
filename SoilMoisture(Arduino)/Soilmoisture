@@ -12,8 +12,7 @@ pinMode(light, OUTPUT);
 pinMode(light1, OUTPUT);
 pinMode(light2, OUTPUT);
 pinMode(9, OUTPUT);
-23Serial.println("Annamalai University BE CSE 2022 "); // print some text in
-Serial Monitor
+Serial.println("Annamalai University BE CSE 2022 ");
 Serial.println("Soil Moisture Program");
 }
 void loop() {
@@ -31,14 +30,12 @@ if (SensorValue < 1000 && SensorValue >= 600)
 digitalWrite(9, LOW);
 Serial.println("DRY SOIL");
 digitalWrite(light, HIGH);
-tone(buzzer, 1000); // Send 1KHz sound signal...
+tone(buzzer, 1000);
 delay(1000);
-// ...for 1 sec
 digitalWrite(light1, LOW);
 digitalWrite(light2, LOW);
 tone(buzzer, 500);
 noTone(buzzer);
-// Stop sound...
 }
 24if (SensorValue < 600 && SensorValue >= 370)
 {
