@@ -1,5 +1,5 @@
 #include <Wire.h>
-int moistpin = A0;
+const int moistpin = A0;
 int moisture;
 void setup() {
 pinMode(moistpin, INPUT);
@@ -9,6 +9,7 @@ void loop() {
 int value = analogRead(moistpin);
 moisture = (100 - ((value/1023.00) * 100));
 Serial.print(moisture);
+Serial.println("%");
 if (value > 1000)
 {
 Serial.println("Not in soil or disconnected");
@@ -17,12 +18,13 @@ if (value < 1000 && value >= 600)
 {
 Serial.println("DRY SOIL");
 }
-if (value < 600 && value >= 370)
+if (value < 600 && value >= 300)
 {
 Serial.println("HUMID SOIL");
 }
 else
 {
 Serial.println("WATER SOIL");
+}
 delay(1000);
-}}
+}
