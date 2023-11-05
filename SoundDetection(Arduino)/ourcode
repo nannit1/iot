@@ -13,10 +13,12 @@ Serial.println(value);
 if(value > threshold)
 {
 digitalWrite(ledPin,HIGH);
-delay(200);
+Serial.println("Sound Detected")
 }
 else
 {
 digitalWrite(ledPin,LOW);
+Serial.println("Sound not detected");
 }
 delay(1000);
+}
