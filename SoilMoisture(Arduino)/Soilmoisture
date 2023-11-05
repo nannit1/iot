@@ -37,7 +37,7 @@ digitalWrite(light2, LOW);
 tone(buzzer, 500);
 noTone(buzzer);
 }
-24if (SensorValue < 600 && SensorValue >= 370)
+if (SensorValue < 600 && SensorValue >= 370)
 {
 digitalWrite(9, HIGH);
 Serial.println("HUMID SOIL");
