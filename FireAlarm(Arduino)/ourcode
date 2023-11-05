@@ -12,7 +12,7 @@ void setup()
 void loop() 
 {
   value = digitalRead(firepin);
-  if (Flame== HIGH)
+  if (value == HIGH)
   {
     Serial.println("Fire is Detected");
     digitalWrite(buzzer, HIGH);
