@@ -10,9 +10,11 @@ int value = analogRead(flexPin);
 Serial.println(value);
 if(value>flex){
 digitalWrite(ledPin,HIGH);
+Serial.println("Flex");
 }
 else{
 digitalWrite(ledPin,LOW);
+Serial.println("No flex");
 }
 delay(1000);
 }
