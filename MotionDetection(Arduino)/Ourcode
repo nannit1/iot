@@ -13,11 +13,11 @@ Serial.println(value);
 if(value == HIGH)
 {
 digitalWrite(ledPin,HIGH);
-Serial.println("Sound Detected");
+Serial.println("Motion Detected");
 }
 else
 {
 digitalWrite(ledPin,LOW);
-Serial.println("Sound not Detected");
+Serial.println("Motion not Detected");
 }
 delay(1000);
