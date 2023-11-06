@@ -13,7 +13,7 @@ Serial.println(value);
 if(value > threshold)
 {
 digitalWrite(ledPin,HIGH);
-Serial.println("Sound Detected")
+Serial.println("Sound Detected");
 }
 else
 {
