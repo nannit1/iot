@@ -1,5 +1,4 @@
 #include <Wire.h>
-#include <LiquidCrystal_I2C.h>
 const int sensorMin = 0;
 const int sensorMax = 1024;
 const int buzzer = 8;
@@ -40,4 +39,4 @@ delay(500);
 digitalWrite(light, LOW);
 digitalWrite(light1, LOW);
 digitalWrite(light2, LOW);
-}
+}}
