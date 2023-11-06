@@ -30,7 +30,6 @@ void loop() {
   return; }
   float hif = dht.computeHeatIndex(f, h);
   float hic = dht.computeHeatIndex(t, h, false);
-  (isFahreheit = false)
   Serial.print(F(" Humidity: "));
   Serial.print(h);
   Serial.print(F("% Temperature: "));
